@@ -8,10 +8,8 @@ resource "aws_iam_policy" "ct_iam_policy" {
       {
         Effect = "Allow"
         Action = [
-          "sso:DescribeAccountAssignmentCreationStatus",
-          "sso:CreateAccountAssignment",
-          "organizations:CloseAccount",
-          "organizations:MoveAccount"
+          "organizations:TagResource",
+          "organizations:UntagResource"
         ]
         Resource = "*"
       }
